@@ -22,16 +22,16 @@ create_project -in_memory -part xc7a100tfgg484-2L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/10124/Desktop/ALU/ALU.cache/wt [current_project]
-set_property parent.project_path C:/Users/10124/Desktop/ALU/ALU.xpr [current_project]
+set_property webtalk.parent_dir D:/Mygit/PCC-HomeWork/ALU/ALU.cache/wt [current_project]
+set_property parent.project_path D:/Mygit/PCC-HomeWork/ALU/ALU.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/10124/Desktop/ALU/ALU.cache/ip [current_project]
+set_property ip_output_repo d:/Mygit/PCC-HomeWork/ALU/ALU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/10124/Desktop/ALU/ALU.srcs/sources_1/new/alu.v
-  C:/Users/10124/Desktop/ALU/ALU.srcs/sources_1/new/selecter.v
-  C:/Users/10124/Desktop/ALU/ALU.srcs/sources_1/new/board.v
+  D:/Mygit/PCC-HomeWork/ALU/ALU.srcs/sources_1/new/alu.v
+  D:/Mygit/PCC-HomeWork/ALU/ALU.srcs/sources_1/new/selecter.v
+  D:/Mygit/PCC-HomeWork/ALU/ALU.srcs/sources_1/new/board.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -41,8 +41,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/10124/Desktop/ALU/ALU.srcs/constrs_1/new/board.xdc
-set_property used_in_implementation false [get_files C:/Users/10124/Desktop/ALU/ALU.srcs/constrs_1/new/board.xdc]
+read_xdc D:/Mygit/PCC-HomeWork/ALU/ALU.srcs/constrs_1/new/board.xdc
+set_property used_in_implementation false [get_files D:/Mygit/PCC-HomeWork/ALU/ALU.srcs/constrs_1/new/board.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

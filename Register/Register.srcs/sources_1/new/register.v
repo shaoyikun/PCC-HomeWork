@@ -21,7 +21,7 @@
 
 
 module register(
-    input[5:0] R_Addr_A,R_Addr_B,W_Addr,
+    input[4:0] R_Addr_A,R_Addr_B,W_Addr,
     input Write_Reg,Reset,Clk,
     input[31:0] W_Data,
     output[31:0] R_Data_A,R_Data_B
@@ -30,8 +30,8 @@ module register(
     reg [5:0] i;
     reg[31:0] REG_Files[0:31];
     
-    assign R_Data_A = REG_Files[R_Data_A];
-    assign R_Data_B = REG_Files[R_Data_B];
+    assign R_Data_A = REG_Files[R_Addr_A];
+    assign R_Data_B = REG_Files[R_Addr_B];
     
     always @(posedge Clk or posedge Reset)
     begin 

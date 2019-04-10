@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/10124/Desktop/ALU/ALU.srcs/constrs_1/new/board.xdc rfile:../../../ALU.srcs/constrs_1/new/board.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Mygit/PCC-HomeWork/ALU/ALU.srcs/constrs_1/new/board.xdc rfile:../../../ALU.srcs/constrs_1/new/board.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T3  [get_ports {myInput[31]}]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]

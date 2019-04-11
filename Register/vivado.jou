@@ -2,39 +2,13 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Apr 10 18:55:07 2019
-# Process ID: 2920
+# Start of session at: Thu Apr 11 09:02:44 2019
+# Process ID: 1472
 # Current directory: D:/Mygit/PCC-HomeWork/Register
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12096 D:\Mygit\PCC-HomeWork\Register\Register.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21240 D:\Mygit\PCC-HomeWork\Register\Register.xpr
 # Log file: D:/Mygit/PCC-HomeWork/Register/vivado.log
 # Journal file: D:/Mygit/PCC-HomeWork/Register\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/Mygit/PCC-HomeWork/Register/Register.xpr
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-file mkdir D:/Mygit/PCC-HomeWork/Register/Register.srcs/constrs_1
-file mkdir D:/Mygit/PCC-HomeWork/Register/Register.srcs/constrs_1/new
-close [ open D:/Mygit/PCC-HomeWork/Register/Register.srcs/constrs_1/new/board.xdc w ]
-add_files -fileset constrs_1 D:/Mygit/PCC-HomeWork/Register/Register.srcs/constrs_1/new/board.xdc
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1

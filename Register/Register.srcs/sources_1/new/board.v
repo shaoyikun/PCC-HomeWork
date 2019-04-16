@@ -23,16 +23,20 @@
 module board(
     input[31:0] myInput,
     input[5:0] swb,
-    output[31:0] led
+    input clk,
+    output[31:0] led,
+    output [2:0] which,
+    output [7:0] seg,
+    output reg enable = 1
     );
     
     reg Write_Reg = 0;
     reg flag = 0;
     reg[4:0] R_Addr_A,R_Addr_B,W_Addr;
-    reg[31:0] result,W_Data;
+    reg[31:0] led_result,dis_result,W_Data;
     wire[31:0] R_Data_A,R_Data_B;
     
-    assign led = result;
+    assign led = led_result;
     //按钮1：输入32位前15位为寄存器地址
     //按钮2：输入32位为输入寄存器的内容
     //按钮3：最高位开关为写信号，1时执行写操作
@@ -54,13 +58,12 @@ module board(
                 6'b000100:Write_Reg <= myInput[31];
                 6'b001000:
                     begin
-                        flag <= ~flag;
-                        case(flag)
-                            0:result <= R_Data_A;
-                            1:result <= R_Data_B;        
-                        endcase
+                        led_result <= R_Data_A;
+                        dis_result <= R_Data_B;        
                     end
             endcase    
         end
     register myregister(R_Addr_A,R_Addr_B,W_Addr,Write_Reg,swb[4],swb[5],W_Data,R_Data_A,R_Data_B);
+    Display Display_Instance(.clk(clk), .data(dis_result),
+        .which(which), .seg(seg));
 endmodule

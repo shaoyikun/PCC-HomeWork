@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu Apr 18 08:23:06 2019
-| Host             : DESKTOP-705MG5T running 64-bit major release  (build 9200)
+| Date             : Thu Apr 18 12:09:27 2019
+| Host             : DESKTOP-B8MAG06 running 64-bit major release  (build 9200)
 | Command          : report_power -file board_power_routed.rpt -pb board_power_summary_routed.pb -rpx board_power_routed.rpx
 | Design           : board
 | Device           : xc7a100tfgg484-2L
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.725        |
+| Total On-Chip Power (W)  | 1.753        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.630        |
+| Dynamic (W)              | 1.658        |
 | Device Static (W)        | 0.094        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 95.4         |
-| Junction Temperature (C) | 29.6         |
+| Max Ambient (C)          | 95.3         |
+| Junction Temperature (C) | 29.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.172 |     2065 |       --- |             --- |
-|   LUT as Logic |     0.142 |      636 |     63400 |            1.00 |
+| Slice Logic    |     0.174 |     2065 |       --- |             --- |
+|   LUT as Logic |     0.144 |      636 |     63400 |            1.00 |
 |   BUFG         |     0.014 |        3 |        32 |            9.38 |
 |   Register     |     0.011 |     1154 |    126800 |            0.91 |
 |   F7/F8 Muxes  |     0.005 |      260 |     63400 |            0.41 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.493 |     1502 |       --- |             --- |
+| Signals        |     0.519 |     1502 |       --- |             --- |
 | I/O            |     0.966 |       83 |       285 |           29.12 |
 | Static Power   |     0.094 |          |           |                 |
-| Total          |     1.725 |          |           |                 |
+| Total          |     1.753 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.834 |       0.816 |      0.018 |
+| Vccint    |       1.000 |     0.862 |       0.845 |      0.018 |
 | Vccaux    |       1.800 |     0.085 |       0.067 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,8 +138,8 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| board              |     1.630 |
-|   Display_Instance |     0.108 |
+| board              |     1.658 |
+|   Display_Instance |     0.107 |
 |   myregister       |     0.124 |
 +--------------------+-----------+
 

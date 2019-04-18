@@ -2,28 +2,16 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Apr 11 12:48:31 2019
-# Process ID: 7556
-# Current directory: C:/Users/SYK/Desktop/Register
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2480 C:\Users\SYK\Desktop\Register\Register.xpr
-# Log file: C:/Users/SYK/Desktop/Register/vivado.log
-# Journal file: C:/Users/SYK/Desktop/Register\vivado.jou
+# Start of session at: Thu Apr 18 08:19:14 2019
+# Process ID: 22268
+# Current directory: D:/Mygit/PCC-HomeWork/Register
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2428 D:\Mygit\PCC-HomeWork\Register\Register.xpr
+# Log file: D:/Mygit/PCC-HomeWork/Register/vivado.log
+# Journal file: D:/Mygit/PCC-HomeWork/Register\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/SYK/Desktop/Register/Register.xpr
-update_compile_order -fileset sources_1
-close [ open C:/Users/SYK/Desktop/Register/Register.srcs/sources_1/new/Display.v w ]
-add_files C:/Users/SYK/Desktop/Register/Register.srcs/sources_1/new/Display.v
-update_compile_order -fileset sources_1
+open_project D:/Mygit/PCC-HomeWork/Register/Register.xpr
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-reset_run impl_1 -prev_step 
-reset_run impl_1 -prev_step 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
+launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1

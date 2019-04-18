@@ -68,12 +68,12 @@ set rc [catch {
   create_project -in_memory -part xc7a100tfgg484-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/SYK/Desktop/Register/Register.cache/wt [current_project]
-  set_property parent.project_path C:/Users/SYK/Desktop/Register/Register.xpr [current_project]
-  set_property ip_output_repo C:/Users/SYK/Desktop/Register/Register.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Mygit/PCC-HomeWork/Register/Register.cache/wt [current_project]
+  set_property parent.project_path D:/Mygit/PCC-HomeWork/Register/Register.xpr [current_project]
+  set_property ip_output_repo D:/Mygit/PCC-HomeWork/Register/Register.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/SYK/Desktop/Register/Register.runs/synth_1/board.dcp
-  read_xdc C:/Users/SYK/Desktop/Register/Register.srcs/constrs_1/new/board.xdc
+  add_files -quiet D:/Mygit/PCC-HomeWork/Register/Register.runs/synth_1/board.dcp
+  read_xdc D:/Mygit/PCC-HomeWork/Register/Register.srcs/constrs_1/new/board.xdc
   link_design -top board -part xc7a100tfgg484-2L
   close_msg_db -file init_design.pb
 } RESULT]

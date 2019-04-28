@@ -18,15 +18,31 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module alu(
+module ALU(
     input [31:0] X,
     input[31:0] Y,
     input [3:0] ALU_OP,
-    output [31:0]F,
+    output reg[31:0]F,
     output ZF,
     output OF
     );
     
-    selecter myselecter(X,Y,ALU_OP,F,ZF,OF);
+    reg C32;
+    
+    always @*
+        begin
+            case(ALU_OP)
+                4'b0000: F <= X & Y;
+                4'b0001: F <= X | Y;
+                4'b0010: F <= X ^ Y;
+                4'b0011: F <= ~(X | Y);
+                4'b0100: {C32,F} <= X + Y;
+                4'b0101: {C32,F} <= X - Y;
+                4'b0110: F <= X < Y ? 1 : 0;
+                4'b0111: F <= X << Y; 
+            endcase
+        end
+    assign ZF = ~(|F);   
+    assign OF = X[31] ^ Y[31] ^ F[31] ^ C32;
         
 endmodule

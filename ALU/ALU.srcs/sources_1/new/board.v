@@ -54,6 +54,6 @@ module board(
             endcase
         end
         
-    alu myalu(X,Y,ALU_OP,F,ZF,OF);
+    ALU myALU(X,Y,ALU_OP,F,ZF,OF);
 
 endmodule

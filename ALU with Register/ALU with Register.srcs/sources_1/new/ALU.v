@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2019/03/29 09:51:49
+// Create Date: 2019/03/29 09:38:19
 // Design Name: 
-// Module Name: selecter
+// Module Name: ALU
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -18,13 +18,13 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-
-module selecter(
-    input[31:0]X,Y,
-    input[3:0] ALU_OP,
-    output reg[31:0] F,
-    output ZF,OF
+module ALU(
+    input [31:0] X,
+    input[31:0] Y,
+    input [3:0] ALU_OP,
+    output reg[31:0]F,
+    output ZF,
+    output OF
     );
     
     reg C32;
@@ -44,4 +44,5 @@ module selecter(
         end
     assign ZF = ~(|F);   
     assign OF = X[31] ^ Y[31] ^ F[31] ^ C32;
+        
 endmodule

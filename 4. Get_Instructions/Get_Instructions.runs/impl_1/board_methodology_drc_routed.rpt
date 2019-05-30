@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat May 25 12:28:36 2019
-| Host         : DESKTOP-0V8VVCQ running 64-bit major release  (build 9200)
+| Date         : Thu May 30 12:11:17 2019
+| Host         : DESKTOP-B8MAG06 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file board_methodology_drc_routed.rpt -pb board_methodology_drc_routed.pb -rpx board_methodology_drc_routed.rpx
 | Design       : board
 | Device       : xc7a100tfgg484-2L
@@ -34,72 +34,72 @@ Table of Contents
 -----------------
 TIMING-17#1 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[0]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[10]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[1]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[2]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[3]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[4]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[5]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[6]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[7]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[8]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/count_reg[9]/C is not reached by a timing clock
+The clock pin Display_Instance/count_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/which_reg[0]/C is not reached by a timing clock
+The clock pin Display_Instance/which_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/which_reg[1]/C is not reached by a timing clock
+The clock pin Display_Instance/which_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Warning
 Non-clocked sequential cell  
-The clock pin myInstructions/Display_Instance/which_reg[2]/C is not reached by a timing clock
+The clock pin Display_Instance/which_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Warning

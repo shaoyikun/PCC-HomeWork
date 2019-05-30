@@ -25,11 +25,9 @@ module Instructions(
     input reset,
     input myclk,
     output[31:0] Inst_code,//输出数据
-    output[7:0] seg,//数码管输出
-    output reg enable = 1
+    output reg[31:0] PC = 0
     );
     
-    reg [31:0] PC = 0;
     reg [5:0] addr;
     
     Inst_ROM my_ROM (
@@ -39,17 +37,18 @@ module Instructions(
     .douta(Inst_code)  // output wire [31 : 0] douta
     );
     
-    Display Display_Instance(.clk(clk), .data(PC),.seg(seg));
-    
     always@(posedge myclk)
-        addr = PC[7:2];
-    always@(negedge myclk or posedge reset)
+        begin 
+            addr <= PC[7:2];
+        end
+        
+    always@(negedge myclk)
         begin
             if(reset)
                 begin
                     PC <= 0;
                 end
             else
-                PC <= PC +4;
-        end
+                PC <= PC + 4;
+            end
 endmodule

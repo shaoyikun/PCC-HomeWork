@@ -24,25 +24,18 @@ module board(
     input clk,
     input [1:0]swb,
     input [1:0]options,
-    output [7:0]led,
-    output [7:0]seg
+    output[2:0] which,
+    output [31:0]led,
+    output [7:0]seg,
+    output reg enable=1
     );
-    
+ 
+    wire[31:0] PC;
     wire[31:0] data;
-    reg [7:0] byte;
+      
+    Instructions myInstructions(.clk(clk),.reset(swb[0]),.myclk(swb[1]),.Inst_code(led),.PC(PC));
+    Display Display_Instance(.clk(clk), .data(PC),
+        .which(which), .seg(seg));
     
-    assign led = byte;
     
-    Instructions myInstructions(.clk(clk),.reset(swb[0]),.myclk(swb[1]),.Inst_code(data),.seg(seg));
-    
-    always @(options)
-        begin
-            case(options)
-                2'b00:byte = data[7:0];  
-                2'b01:byte = data[15:8];  
-                2'b10:byte = data[23:16];   
-                2'b11:byte = data[31:24];  
-                default:byte = data[7:0];
-            endcase
-        end
 endmodule

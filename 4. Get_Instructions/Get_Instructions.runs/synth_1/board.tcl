@@ -17,28 +17,27 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tfgg484-2L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.cache/wt} [current_project]
-set_property parent.project_path {D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.xpr} [current_project]
+set_property webtalk.parent_dir {C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.cache/wt} [current_project]
+set_property parent.project_path {C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {d:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.cache/ip} [current_project]
+set_property ip_output_repo {c:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files {{D:/Mygit/PCC-HomeWork/4. Get_Instructions/config.coe}}
+add_files {{C:/GitHub/PCC-HomeWork/4. Get_Instructions/config.coe}}
 read_verilog -library xil_defaultlib {
-  {D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/new/Display.v}
-  {D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/new/Instructions.v}
-  {D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/new/board.v}
+  {C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/new/Display.v}
+  {C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/new/Instructions.v}
+  {C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/new/board.v}
 }
-read_ip -quiet {{D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci}}
-set_property used_in_implementation false [get_files -all {{d:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/ip/Inst_ROM/Inst_ROM_ooc.xdc}}]
+read_ip -quiet {{C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci}}
+set_property used_in_implementation false [get_files -all {{c:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/sources_1/ip/Inst_ROM/Inst_ROM_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,8 +47,8 @@ set_property used_in_implementation false [get_files -all {{d:/Mygit/PCC-HomeWor
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/constrs_1/new/board.xdc}}
-set_property used_in_implementation false [get_files {{D:/Mygit/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/constrs_1/new/board.xdc}}]
+read_xdc {{C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/constrs_1/new/board.xdc}}
+set_property used_in_implementation false [get_files {{C:/GitHub/PCC-HomeWork/4. Get_Instructions/Get_Instructions.srcs/constrs_1/new/board.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

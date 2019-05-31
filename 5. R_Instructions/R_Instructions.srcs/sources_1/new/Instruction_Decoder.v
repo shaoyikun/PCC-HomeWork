@@ -8,7 +8,7 @@ module Instruction_Decoder(
     always @(*)
         begin
             case(OP)
-                2'b000000:
+                6'b000000:
                     begin
                         case(func)
                             6'b100000:

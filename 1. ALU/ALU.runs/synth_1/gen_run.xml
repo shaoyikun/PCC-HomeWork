@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1554897940">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1559275104">
   <File Type="PA-TCL" Name="board.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="board_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="board_reports.tcl"/>
@@ -12,13 +12,6 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/alu.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/selecter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

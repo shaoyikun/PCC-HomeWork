@@ -12,6 +12,12 @@ module Register(
     assign R_Data_A = REG_Files[R_Addr_A];
     assign R_Data_B = REG_Files[R_Addr_B];
     
+    initial
+        begin
+            for(i = 0; i <= 31; i=i+1)
+                REG_Files[i] <= 0;
+        end
+        
     always @(negedge clk)
     begin 
         if(Reset)

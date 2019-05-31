@@ -6,7 +6,7 @@ module Instructions(
     output reg[31:0] PC = 0
     );
     
-    reg [5:0] addr;
+    reg [5:0] addr = 0;
     reg [31:0] dina = 0;
     
     Inst_ROM my_ROM (

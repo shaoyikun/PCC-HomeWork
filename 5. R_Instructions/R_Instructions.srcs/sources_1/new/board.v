@@ -28,4 +28,5 @@ module board(
             else
                 data <= ALU_F;
         end
+        
 endmodule

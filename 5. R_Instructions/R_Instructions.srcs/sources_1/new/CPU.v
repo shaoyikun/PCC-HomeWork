@@ -12,11 +12,11 @@ module CPU(
     wire[3:0] ALU_OP;
     wire Write_Reg;
     
-    assign OP = Inst_code[31:27];
+    assign OP = Inst_code[31:26];
     assign func = Inst_code[5:0];
-    assign rs = Inst_code[26:22];
-    assign rt = Inst_code[21:17];
-    assign rd = Inst_code[16:12];
+    assign rs = Inst_code[25:21];
+    assign rt = Inst_code[20:16];
+    assign rd = Inst_code[15:11];
     assign ALU_F = W_Data;
     
     Instructions myInstructions(.clk(clk),.reset(rst),.Inst_code(Inst_code),.PC(PC));

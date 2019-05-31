@@ -3,12 +3,12 @@ set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
 # Switch Button£¬°´Å¥
 set_property IOSTANDARD LVCMOS18 [get_ports swb]
-set_property PACKAGE_PIN R4  [get_ports {swb[1]}]
-set_property PACKAGE_PIN AA4 [get_ports {swb[2]}]
-set_property PACKAGE_PIN AB6 [get_ports {swb[3]}]
-set_property PACKAGE_PIN T5  [get_ports {swb[4]}]
-set_property PACKAGE_PIN V8  [get_ports {swb[5]}]
-set_property PACKAGE_PIN AA8 [get_ports {swb[6]}]
+set_property PACKAGE_PIN AA8  [get_ports {swb[0]}]
+set_property PACKAGE_PIN V8 [get_ports {swb[1]}]
+set_property PACKAGE_PIN T5 [get_ports {swb[2]}]
+set_property PACKAGE_PIN AB6  [get_ports {swb[3]}]
+set_property PACKAGE_PIN AA4  [get_ports {swb[4]}]
+set_property PACKAGE_PIN R4 [get_ports {swb[5]}]
 
 # LED
 set_property IOSTANDARD LVCMOS18 [get_ports led]

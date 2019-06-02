@@ -5,12 +5,17 @@ module ALU(
     input [3:0] ALU_OP,
     output reg[31:0]F,
     output ZF,
-    output reg OF=0
+    output reg OF
     );
     
     reg C32;
-    wire myOF;
     
+    
+    initial
+        begin
+            OF = 0;
+        end
+       
     assign ZF = ~(|F);   
     assign myOF = A[31] ^ B[31] ^ F[31] ^ C32;
     

@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
 module CPU(
     input clk,rst,
-    output ZF,OF,
+    output ZF,
+    output OF,
     output[31:0] PC,
     output[31:0] ALU_F
     );

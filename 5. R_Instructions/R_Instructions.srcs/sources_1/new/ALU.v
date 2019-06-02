@@ -5,10 +5,14 @@ module ALU(
     input [3:0] ALU_OP,
     output reg[31:0]F,
     output ZF,
-    output OF
+    output reg OF=0
     );
     
     reg C32;
+    wire myOF;
+    
+    assign ZF = ~(|F);   
+    assign myOF = A[31] ^ B[31] ^ F[31] ^ C32;
     
     always @*
         begin
@@ -17,13 +21,18 @@ module ALU(
                 4'b0001: F <= A | B;
                 4'b0010: F <= A ^ B;
                 4'b0011: F <= ~(A | B);
-                4'b0100: {C32,F} <= A + B;
-                4'b0101: {C32,F} <= A - B;
+                4'b0100: 
+                    begin
+                        {C32,F} <= A + B;
+                        OF <= myOF;
+                    end
+                4'b0101:
+                    begin
+                        {C32,F} <= A - B;
+                        OF <= myOF;
+                    end
                 4'b0110: F <= A < B ? 1 : 0;
                 4'b0111: F <= A << B; 
             endcase
-        end
-    assign ZF = ~(|F);   
-    assign OF = A[31] ^ B[31] ^ F[31] ^ C32;
-        
+        end 
 endmodule

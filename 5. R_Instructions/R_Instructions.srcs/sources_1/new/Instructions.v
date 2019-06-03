@@ -6,21 +6,19 @@ module Instructions(
     output reg[31:0] PC = 0
     );
     
+    wire [31:0] PC_new;
     reg [5:0] addr = 0;
     reg [31:0] dina = 0;
+    
+    assign PC_new = PC + 4;
     
     Inst_ROM my_ROM (
     .clka(clk),    // input wire clka
     .wea(0),      // input wire [0 : 0] wea
-    .addra(addr),  // input wire [5 : 0] addra
+    .addra(PC[7:2]),  // input wire [5 : 0] addra
     .douta(Inst_code),  // output wire [31 : 0] douta
     .dina(dina)
     );
-    
-    always@(posedge clk)
-        begin 
-            addr <= PC[7:2];
-        end
         
     always@(negedge clk)
         begin
@@ -29,6 +27,6 @@ module Instructions(
                     PC <= 0;
                 end
             else
-                PC <= PC + 4;
+                PC <= {24'h000000,PC_new[7:0]};
         end
 endmodule

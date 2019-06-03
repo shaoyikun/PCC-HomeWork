@@ -2,7 +2,7 @@
 module Instruction_Decoder(
     input[5:0] OP,func,
     output reg[3:0] ALU_OP,
-    output reg Write_Reg,rd_rt_s,rt_imm_s,imm_s
+    output reg Write_Reg
     );
     
     always @(*)

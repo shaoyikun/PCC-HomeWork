@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2019/05/31 12:31:57
-// Design Name: 
-// Module Name: boardTest
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module boardTest(
     output ZF,OF,
@@ -49,7 +29,7 @@ module boardTest(
     initial 
         begin
             rst = 0;
-            clk = 0;
+
             
             #50;
             clk = 1;

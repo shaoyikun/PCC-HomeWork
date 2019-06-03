@@ -8,6 +8,7 @@ module ALU(
     output reg OF
     );
     
+    wire myOF;
     reg C32;
     
     

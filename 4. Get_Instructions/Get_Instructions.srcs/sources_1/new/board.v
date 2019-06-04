@@ -23,7 +23,6 @@
 module board(
     input clk,
     input [1:0]swb,
-    input [1:0]options,
     output[2:0] which,
     output [31:0]led,
     output [7:0]seg,

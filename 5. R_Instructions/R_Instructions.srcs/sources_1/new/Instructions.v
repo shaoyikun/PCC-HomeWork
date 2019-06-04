@@ -7,7 +7,6 @@ module Instructions(
     );
     
     wire [31:0] PC_new;
-    reg [5:0] addr = 0;
     reg [31:0] dina = 0;
     
     assign PC_new = PC + 4;

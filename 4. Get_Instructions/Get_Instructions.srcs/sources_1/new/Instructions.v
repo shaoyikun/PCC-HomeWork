@@ -21,15 +21,16 @@
 
 
 module Instructions(
-    input clk,  //数码管时钟信号  
+    input clk,  //时钟信号  
     input reset,
-    input myclk,
     output[31:0] Inst_code,//输出数据
     output reg[31:0] PC = 0
     );
     
     wire [31:0] PC_new;
     reg [31:0] dina = 0;
+    
+    assign PC_new = PC + 4;
     
     Inst_ROM my_ROM (
     .clka(clk),    // input wire clka
@@ -48,4 +49,5 @@ module Instructions(
             else
                 PC <= {24'h000000,PC_new[7:0]};
         end
+        
 endmodule

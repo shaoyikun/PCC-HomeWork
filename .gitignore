@@ -11,7 +11,7 @@
 !*/*.xpr
 
 # Verilog Source
-!*/*.v
+!*.v
 
 # Constraints
 !*/*.xdc

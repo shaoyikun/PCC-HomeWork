@@ -37,13 +37,13 @@ module boardTest(
             #50;
             clk = 0;
             
-             #50;
+            #50;
             clk = 1;
             
             #50;
             clk = 0;
             
-             #50;
+            #50;
             clk = 1;
             
             #50;

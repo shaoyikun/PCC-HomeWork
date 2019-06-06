@@ -39,7 +39,7 @@ module ALU(
                 4'b0100: {C32,F} <= X + Y;
                 4'b0101: {C32,F} <= X - Y;
                 4'b0110: F <= X < Y ? 1 : 0;
-                4'b0111: F <= X << Y; 
+                4'b0111: F <= Y << X; 
             endcase
         end
     assign ZF = ~(|F);   

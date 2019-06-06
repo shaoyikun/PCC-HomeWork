@@ -38,7 +38,7 @@ module ALU(
                         OF <= myOF;
                     end
                 4'b0110: F <= A < B ? 1 : 0;
-                4'b0111: F <= A << B; 
+                4'b0111: F <= B << A; 
             endcase
         end 
 endmodule

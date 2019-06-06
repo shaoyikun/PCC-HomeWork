@@ -14,7 +14,7 @@
 !*.v
 
 # Constraints
-!*/*.xdc
+!*.xdc
 
 # IP core
 !*.xci

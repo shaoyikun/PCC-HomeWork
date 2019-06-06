@@ -37,7 +37,7 @@ module CPU(
     Data_ROM myData_ROM (
     .clka(clk),    // input wire clka
     .wea(Mem_Write),      // input wire [0 : 0] wea
-    .addra(F[7:2]),  // input wire [5 : 0] addra
+    .addra(F[5:0]),  // input wire [5 : 0] addra
     .dina(M_W_Data),    // input wire [31 : 0] dina
     .douta(M_R_Data)  // output wire [31 : 0] douta
     );

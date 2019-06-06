@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu May 16 10:45:40 2019
-// Host        : DESKTOP-B8MAG06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/GitHub/PCC-HomeWork/Memory/Memory.srcs/sources_1/ip/RAM_B/RAM_B_stub.v
+// Date        : Thu Jun  6 13:11:43 2019
+// Host        : DESKTOP-0V8VVCQ running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub {D:/Mygit/PCC-HomeWork/3.
+//               Memory/Memory.srcs/sources_1/ip/RAM_B/RAM_B_stub.v}
 // Design      : RAM_B
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tfgg484-2L

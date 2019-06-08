@@ -25,15 +25,15 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.cache/wt} [current_project]
-set_property parent.project_path {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.xpr} [current_project]
+set_property webtalk.parent_dir {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.cache/wt} [current_project]
+set_property parent.project_path {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {d:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.cache/ip} [current_project]
+set_property ip_output_repo {c:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet {{D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM.xci}}
-set_property used_in_implementation false [get_files -all {{d:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_ooc.xdc}}]
+read_ip -quiet {{C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM.xci}}
+set_property used_in_implementation false [get_files -all {{c:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -47,7 +47,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1} -new_name Data_ROM -ip [get_ips Data_ROM]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1} -new_name Data_ROM -ip [get_ips Data_ROM]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -88,32 +88,32 @@ write_checkpoint -force -noxdef Data_ROM.dcp
 create_report "Data_ROM_synth_1_synth_report_utilization_0" "report_utilization -file Data_ROM_utilization_synth.rpt -pb Data_ROM_utilization_synth.pb"
 
 if { [catch {
-  file copy -force {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM.dcp} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM.dcp}
+  file copy -force {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM.dcp} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.v}
+  write_verilog -force -mode synth_stub {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.vhdl}
+  write_vhdl -force -mode synth_stub {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.v}
+  write_verilog -force -mode funcsim {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.vhdl}
+  write_vhdl -force -mode funcsim {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -123,47 +123,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM.dcp} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM.dcp}
+  file copy -force {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM.dcp} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_stub.v} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.v}
+  file rename -force {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_stub.v} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_stub.vhdl} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.vhdl}
+  file rename -force {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_stub.vhdl} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_sim_netlist.v} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.v}
+  file rename -force {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_sim_netlist.v} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_sim_netlist.vhdl} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.vhdl}
+  file rename -force {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.runs/Data_ROM_synth_1/Data_ROM_sim_netlist.vhdl} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}]} {
+if {[file isdir {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}]} {
   catch { 
-    file copy -force {{D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.v}} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}
+    file copy -force {{C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.v}} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}
   }
 }
 
-if {[file isdir {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}]} {
+if {[file isdir {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}]} {
   catch { 
-    file copy -force {{D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.vhdl}} {D:/Mygit/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}
+    file copy -force {{C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.srcs/sources_1/ip/Data_ROM/Data_ROM_stub.vhdl}} {C:/GitHub/PCC-HomeWork/6. R-I_Instructions/R-I_Instructions.ip_user_files/ip/Data_ROM}
   }
 }
 file delete __synthesis_is_running__

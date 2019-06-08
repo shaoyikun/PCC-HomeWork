@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../R-I_Instructions.srcs/sources_1/ip/Data_ROM/sim/Data_ROM.v" \
+"../../../../R-I_Instructions.srcs/sources_1/ip/Inst_ROM/sim/Inst_ROM.v" \
+"../../../../R-I_Instructions.srcs/sources_1/new/ALU.v" \
+"../../../../R-I_Instructions.srcs/sources_1/new/Instruction_Decoder.v" \
+"../../../../R-I_Instructions.srcs/sources_1/new/Instructions.v" \
+"../../../../R-I_Instructions.srcs/sources_1/new/Register.v" \
+"../../../../R-I_Instructions.srcs/sim_1/new/boardTest.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

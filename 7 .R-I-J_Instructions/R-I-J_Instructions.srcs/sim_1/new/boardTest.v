@@ -193,5 +193,243 @@ module boardTest(
             #50;
             clk =0;
             myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
+            
+             #50;
+            clk = 1;
+            
+            #50;
+            clk = 0;
+            myclk = 1;
+            
+            #50;
+            clk = 1;
+            
+            #50;
+            clk =0;
+            myclk = 0;
         end
 endmodule
